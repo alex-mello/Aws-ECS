@@ -1,5 +1,6 @@
 Description: >
   Aurora Database Cluster with one replication instance and Multi Availability Zones - CI & CD over AWS
+  Aurora Database Cluster com replicação em Mutilplas Zonas
 
 Parameters:
 

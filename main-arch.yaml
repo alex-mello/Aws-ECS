@@ -1,5 +1,5 @@
 Description: >
-  Main Architecture Template. Configuration based on CodeCommit, S3, ECS, Docker & RDS - CI & CD over AWS
+  Arquitetura Principal do Template. Configuração do CodeCommit, S3, ECS, Docker & RDS
 
 
 Parameters:

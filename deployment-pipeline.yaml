@@ -1,5 +1,5 @@
 Description: >
-  Deployment Pipeline configuration Template - CI & CD over AWS
+  Deployment Pipeline configuração
 
 Parameters:
   CodeCommitRepo:

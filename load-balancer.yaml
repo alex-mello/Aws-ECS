@@ -1,6 +1,6 @@
 Description: >
-  Application Load Balancer configuration template - CI & CD over AWS
-
+  Aplicação Load Balancer 
+  
 Parameters:
 
   VpcId:

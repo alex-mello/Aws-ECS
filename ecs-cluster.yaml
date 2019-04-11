@@ -1,5 +1,5 @@
 Description: >
-  ECS Cluster configuration Template - CI & CD over AWS
+  ECS Cluster configuração
 
 Parameters:
   InstanceType:

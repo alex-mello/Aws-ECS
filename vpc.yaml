@@ -1,5 +1,5 @@
 Description: >
-  VPC cloudformation definition - CI & CD over AWS
+  VPC definição CloudFormation
 
 Parameters:
   Name:
