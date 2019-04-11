@@ -1,0 +1,87 @@
+Description: >
+  Aurora Database Cluster with one replication instance and Multi Availability Zones - CI & CD over AWS
+
+Parameters:
+
+  DbPassword:
+    Type: String
+
+  Subnet1:
+    Type: String
+
+  Subnet2:
+    Type: String
+
+  Az1:
+    Type: String
+
+  Az2:
+    Type: String
+
+
+Resources:
+  DBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Database Subnet Groups CI CD over AWS
+      SubnetIds:
+        - !Ref Subnet1
+        - !Ref Subnet2
+
+  RDSCluster:
+    Type: AWS::RDS::DBCluster
+    Properties:
+      MasterUsername: admin
+      MasterUserPassword: !Ref DbPassword
+      DatabaseName: myDB
+      Engine: aurora
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      DBClusterParameterGroupName: !Ref RDSDBClusterParameterGroup
+
+  RDSDBInstance1:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBSubnetGroupName:
+        Ref: DBSubnetGroup
+      DBParameterGroupName:
+        Ref: RDSDBParameterGroup
+      Engine: aurora
+      DBClusterIdentifier:
+        Ref: RDSCluster
+      PubliclyAccessible: 'false'
+      AvailabilityZone: !Ref Az1
+      DBInstanceClass: db.r3.xlarge
+
+  RDSDBInstance2:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBSubnetGroupName:
+        Ref: DBSubnetGroup
+      DBParameterGroupName:
+        Ref: RDSDBParameterGroup
+      Engine: aurora
+      DBClusterIdentifier:
+        Ref: RDSCluster
+      PubliclyAccessible: 'false'
+      AvailabilityZone: !Ref Az2
+      DBInstanceClass: db.r3.xlarge
+
+  RDSDBClusterParameterGroup:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Description: CloudFormation Aurora Cluster Parameter Group CI CD over AWS
+      Family: aurora5.6
+      Parameters:
+        time_zone: US/Eastern
+
+  RDSDBParameterGroup:
+    Type: AWS::RDS::DBParameterGroup
+    Properties:
+      Description: CloudFormation Aurora Parameter Group CI CD over AWS
+      Family: aurora5.6
+      Parameters:
+        sql_mode: IGNORE_SPACE
+Outputs:
+  dbClusterURL:
+    Description: Database Cluster URL Endpoint.
+    Value: !GetAtt RDSCluster.Endpoint.Address
