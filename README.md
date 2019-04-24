@@ -15,7 +15,7 @@ Neste repositorio conterá os arquivos e procedimentos necessários para criar u
     service.yaml - Service & task definition 
     vpc.yaml - VPC de definição no CloudFormation
 
-## Ambiente
+### Ambiente do projeto
 ![cloudcraft-ShareityApiArch3 (1)](https://user-images.githubusercontent.com/39780604/56631269-f6fdd280-662a-11e9-80fa-c257a867eab3.png)
 
 
@@ -29,9 +29,10 @@ Neste repositorio conterá os arquivos e procedimentos necessários para criar u
     
 Executando os procedimentos acima,será criado duas instancia EC2 na AWS.
 
-Para acessar a aplicação que foi utilizada para teste:
+## Para acessar a aplicação que foi utilizada para teste:
 
 Acesse o endereço http://endereço_publico_da_instancia_ec2:8080 (este app executa um arquivo index.php que conecta ao banco, insere dados e exibe os dados no browser).
+
 
 ## Integrantes do Projeto:
 
