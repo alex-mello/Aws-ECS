@@ -25,8 +25,7 @@ Procedimeto para configuração do ambiente:
     
 Executando os procedimentos acima,será criado duas instancia EC2 na AWS.
 
-![cloudcraft-ShareityApiArch3 (1)]
-(https://user-images.githubusercontent.com/39780604/56631269-f6fdd280-662a-11e9-80fa-c257a867eab3.png)
+![cloudcraft-ShareityApiArch3 (1)](https://user-images.githubusercontent.com/39780604/56631269-f6fdd280-662a-11e9-80fa-c257a867eab3.png)
 
 
 Para acessar a aplicação que foi utilizada para teste:
