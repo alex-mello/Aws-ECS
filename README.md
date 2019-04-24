@@ -7,9 +7,9 @@ Neste repositorio conterá os arquivos e procedimentos necessários para criar u
 ### Listagem de arquivos:
 
     Dockerfile - Arquivo de configuração do serviço Apache Web
-    db-cluster.yaml - Aurora Database Cluster com replicação em Mutilplas Zonas
-    deployment-pipeline.yaml - Deployment Pipeline configuração
-    ecs-cluster.yaml - ECS Cluster configuração
+    db-cluster.yaml - Aurora Database Cluster com replicação em Multiplas Zonas
+    deployment-pipeline.yaml - Deployment Pipeline de configuração
+    ecs-cluster.yaml - ECS Cluster de configuração
     load-balancer.yaml - Aplicação Load Balancer na infraestrutura 
     main-arch.yaml - Stack Principal da infraestrutura. Configuração do CodeCommit, S3, ECS, Docker & RDS
     service.yaml - Service & task definition 
