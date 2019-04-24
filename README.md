@@ -22,7 +22,7 @@ Ambiente
 Procedimeto para configuração do ambiente:
 
     Crie um bucket no S3 e coloque todos arquivos nesse bucket
-    Abra o CloudFormation e sete o arquivo main-arch-yaml para iniciar a configuração da Infra
+    Abra o CloudFormation e sete o arquivo main-arch-yaml que está no S3 para iniciar a configuração da Infra
     Após esse processo o CloudFormation executará todos os templates que estão aprovisionados na Stack main-arch.yaml
     
     Obs.: deve ser criado uma Key Pair
@@ -33,6 +33,9 @@ Para acessar a aplicação que foi utilizada para teste:
 
 Acesse o endereço http://endereço_publico_da_instancia_ec2:8080 (este app executa um arquivo index.php que conecta ao banco, insere dados e exibe os dados no browser).
 
+##Integrantes do Projeto:
 
+Alex Mello
+- Linkedin: https://www.linkedin.com/in/alexmello82/
 
       
