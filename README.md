@@ -27,7 +27,7 @@ Neste repositorio conterá os arquivos e procedimentos necessários para criar u
     
     Obs.: deve ser criado uma Key Pair
     
-Executando os procedimentos acima,será criado duas instancia EC2 na AWS.
+Executando os procedimentos acima, será criado duas instancia EC2 na AWS.
 
 ## Para acessar a aplicação que foi utilizada para teste:
 
