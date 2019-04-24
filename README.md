@@ -15,6 +15,10 @@ Listagem de arquivos:
     service.yaml - Service & task definition 
     vpc.yaml - VPC de definição no CloudFormation
 
+Ambiente
+![cloudcraft-ShareityApiArch3 (1)](https://user-images.githubusercontent.com/39780604/56631269-f6fdd280-662a-11e9-80fa-c257a867eab3.png)
+
+
 Procedimeto para configuração do ambiente:
 
     Crie um bucket no S3 e coloque todos arquivos nesse bucket
@@ -24,9 +28,6 @@ Procedimeto para configuração do ambiente:
     Obs.: deve ser criado uma Key Pair
     
 Executando os procedimentos acima,será criado duas instancia EC2 na AWS.
-
-![cloudcraft-ShareityApiArch3 (1)](https://user-images.githubusercontent.com/39780604/56631269-f6fdd280-662a-11e9-80fa-c257a867eab3.png)
-
 
 Para acessar a aplicação que foi utilizada para teste:
 
