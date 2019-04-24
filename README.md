@@ -4,7 +4,7 @@ Repositório da disciplina projeto integrador III.
 
 Neste repositorio conterá os arquivos e procedimentos necessários para criar uma infraestrutura escalável automatizando uma pipeline utilizando serviços da AWS: CloudFormation, S3, ECS Cluster, CodePipeline, CodeCommit, ELB, RDS Cluster utilizaremos também Github e Docker.
 
-Listagem de arquivos:
+### Listagem de arquivos:
 
     Dockerfile - Configuração do servidor Apache
     db-cluster.yaml - Aurora Database Cluster com replicação em Mutilplas Zonas
@@ -15,11 +15,11 @@ Listagem de arquivos:
     service.yaml - Service & task definition 
     vpc.yaml - VPC de definição no CloudFormation
 
-Ambiente
+## Ambiente
 ![cloudcraft-ShareityApiArch3 (1)](https://user-images.githubusercontent.com/39780604/56631269-f6fdd280-662a-11e9-80fa-c257a867eab3.png)
 
 
-Procedimeto para configuração do ambiente:
+### Procedimeto para configuração do ambiente:
 
     Crie um bucket no S3 e coloque todos arquivos nesse bucket
     Abra o CloudFormation e sete o arquivo main-arch-yaml que está no S3 para iniciar a configuração da Infra
