@@ -33,7 +33,7 @@ Para acessar a aplicação que foi utilizada para teste:
 
 Acesse o endereço http://endereço_publico_da_instancia_ec2:8080 (este app executa um arquivo index.php que conecta ao banco, insere dados e exibe os dados no browser).
 
-##Integrantes do Projeto:
+## Integrantes do Projeto:
 
 Alex Mello
 - Linkedin: https://www.linkedin.com/in/alexmello82/
