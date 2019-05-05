@@ -35,7 +35,7 @@ Resources:
   EcsCluster:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.amazonaws.com/cicdoveraws1/ecs-cluster.yaml
+      TemplateURL: https://s3.amazonaws.com/Bucket_S3/ecs-cluster.yaml
       Parameters:
         SourceSecurityGroup: !GetAtt LoadBalancer.Outputs.SecurityGroup
         Subnets: !GetAtt VPC.Outputs.Subnets
@@ -45,7 +45,7 @@ Resources:
   LoadBalancer:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.amazonaws.com/cicdoveraws1/load-balancer.yaml
+      TemplateURL: https://s3.amazonaws.com/Bucket_S3/load-balancer.yaml
       Parameters:
         Subnets: !GetAtt VPC.Outputs.Subnets
         VpcId: !GetAtt VPC.Outputs.VpcId
@@ -53,7 +53,7 @@ Resources:
   EcsService:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.amazonaws.com/cicdoveraws1/service.yaml
+      TemplateURL: https://s3.amazonaws.com/Bucket_S3/service.yaml
       Parameters:
         Cluster: !GetAtt EcsCluster.Outputs.ClusterName
         TargetGroup: !GetAtt LoadBalancer.Outputs.TargetGroup
@@ -61,7 +61,7 @@ Resources:
   VPC:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.amazonaws.com/cicdoveraws1/vpc.yaml
+      TemplateURL: https://s3.amazonaws.com/Bucket_S3/vpc.yaml
       Parameters:
         Name: !Ref AWS::StackName
         VpcCIDR: 10.10.0.0/16
@@ -71,7 +71,7 @@ Resources:
   DatabaseCluster:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.amazonaws.com/cicdoveraws1/db-cluster.yaml
+      TemplateURL: https://s3.amazonaws.com/Bucket_S3/db-cluster.yaml
       Parameters:
         DbPassword: !Ref DbPassword
         Subnet1: !GetAtt VPC.Outputs.Subnet1
@@ -82,7 +82,7 @@ Resources:
   DeploymentPipeline:
    Type: AWS::CloudFormation::Stack
    Properties:
-     TemplateURL: https://s3.amazonaws.com/cicdoveraws1/deployment-pipeline.yaml
+     TemplateURL: https://s3.amazonaws.com/Bucket_S3/deployment-pipeline.yaml
      Parameters:
        Cluster: !GetAtt EcsCluster.Outputs.ClusterName
        CodeCommitRepo: !Ref CodeCommitRepo
@@ -90,7 +90,7 @@ Resources:
        TargetGroup: !GetAtt LoadBalancer.Outputs.TargetGroup
        Repository: !GetAtt EcsService.Outputs.Repository
        StackName: !GetAtt EcsService.Outputs.StackName
-       TemplateBucket: cicdoveraws
+       TemplateBucket: <Pasta Bucket S3>
        DbClusterEndpoint: !GetAtt DatabaseCluster.Outputs.dbClusterURL
        DbPassword: !Ref DbPassword
 
