@@ -144,7 +144,7 @@ Resources:
       ImageId: !FindInMap [ AWSRegionToAMI, !Ref "AWS::Region", AMI ]
       InstanceType: !Ref InstanceType
       IamInstanceProfile: !Ref InstanceProfile
-      KeyName: cicdoverawsKeyPair
+      KeyName: <criar Key Par>
       SecurityGroups:
         - !Ref SecurityGroup
         - !Ref VpcDefaultSG
